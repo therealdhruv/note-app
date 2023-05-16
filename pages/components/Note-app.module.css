@@ -1,0 +1,28 @@
+.button {
+    width: 15rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    border: black;
+}
+
+
+.input {
+    width: 15rem;
+    height: 2rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 5px 0;
+}
+
+.savBtn {
+    width: 15rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border: darkred;
+    font: 'Roboto';
+}
