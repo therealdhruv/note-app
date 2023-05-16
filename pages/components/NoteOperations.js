@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import styles from './Note-app.module.scss'
-
+import styles from './Note-app.module.css'
 
 // importing the firebase database
 import { app, database } from '../../firebaseConfig';
@@ -10,21 +9,21 @@ import { app, database } from '../../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
 
 
-
-// now let's create a collection first
-const notesCollection = collection(database, 'notes');
-
-// function to add a new note
-const saveNote = () => {
-  // we'll use the addDoc function to add a new document to the collection
-  addDoc(dbInstance, {
-    noteTitle: noteTitle
-  })
-}
-
-
-
 const NoteOperations = () => {
+
+
+  // now let's create a collection first
+  const dbInstance = collection(database, 'notes');
+  
+  // function to add a new note
+  const saveNote = () => {
+    // we'll use the addDoc function to add a new document to the collection
+    addDoc(dbInstance, {
+      noteTitle: noteTitle
+    })
+  }
+  
+  // This addDoc function takes two parameters. The first is the dbInstance, which we created previously. The second is the data we want to send. Add them in curly brackets.
 
   const [isInputVisible, setInputVisible] = useState(false);
   const [noteTitle, setNoteTitle] = useState('');
